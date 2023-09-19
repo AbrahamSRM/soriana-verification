@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>Tarjeta Recompensas Soriana</title>
+</head>
+
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <img src="https://drive.google.com/uc?id=17pBwoH5zykDE-PDqxNDlB4q-dS7mjia6" alt="">
+            <img src="https://drive.google.com/uc?id=1KrxcAZA1XZTzQNxavroV9M1sFCCIBs1z" alt="">
+        </div>
+        <div class="email-content">
+            <div class="email-welcome">
+                <h3>¡Hola XXXNombreXXX!</h3>
+                <p>¡Bienvenido al Programa Recompensas Soriana!</p>
+                <img class="welcome-coins" src="https://drive.google.com/uc?id=1wC4S4rGoGtrMNsqCTzHq3EHi0tbJciNx"
+                    alt="">
+            </div>
+            <div class="email-content-data">
+                <p>En días recientes te ha visitado un representante de Inbox Research para hacerte entrega de la
+                    <span>Tarjeta Recompensas Soriana.</span>
+                </p>
+                <p>Para <span>activar tu tarjeta</span> es necesario que confirmes tus datos:</p>
+            </div>
+            <div class="user-data-verification-container">
+                <div class="user-data-verification">
+                    <div class="user-card">
+                        <div class="user-card-left">
+                            <p>ÚLTIMOS 6 DÍGITOS <br>
+                                DE TU TARJETA</p>
+                        </div>
+                        <div class="user-card-right">
+                            <p>123456</p>
+                        </div>
+                    </div>
+                    <div class="user-card-data-verification">
+                        <p><span class="title">Nombre :</span><span class="data">Nombre</span></p>
+                        <p><span class="title">Apellido :</span><span class="data">Apellido Apellido</span></p>
+                        <p><span class="title">Numero celular :</span><span class="data">01 2345 6789</span></p>
+                        <p><span class="title">Correo Electrónico :</span><span class="data">nombre@mail.com</span></p>
+                    </div>
+                </div>
+            </div>
+            <img src="https://drive.google.com/uc?id=1Ip6bB9TgFwoozBOFC7mWiX-PTtl_33ah" alt="" class="coins-middle">
+            <div class="confirmation-container">
+                <h3>Para confirmar da click en solo una de estas opciones.</h3>
+                <div class="buttons-container">
+                    <button class="btn-primary" (click)="clickConfirmCorrectData()">¡SI, MIS DATOS SON CORRECTOS!</button>
+                    <button class="btn-secondary">¡NO, REQUIERO VERIFICAR MIS DATOS!</button>
+                </div>
+                <p>Te esperamos en la <span>Tienda Soriana - López de Lara</span> en Nuevo Laredo, a partir del 11 de
+                    octubre del 2023.</p>
+                <div class="email-footer">
+                    <img class="cards" src="https://drive.google.com/uc?id=1o50g--ZYVaFDq9Ope1BhTT7QIMFP4pwg" alt="">
+                    <div class="email-footer-data">
+                        <h4>Para conocer más <span class="bold">visita:</span> </h4>
+                        <button class="btn-terciary">Programa Recompensas Soriana</button>
+                        <p>¡Te esperamos pronto!</p>
+                        <img src="https://drive.google.com/uc?id=17pBwoH5zykDE-PDqxNDlB4q-dS7mjia6" alt="">
+                        <img src="https://drive.google.com/uc?id=1BqAlanrOet5aufQBTmv3kBILbhm2Ey2Z" alt=""
+                            class="coin-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!--  <span class="disclaimer">No responda a este mensaje. Este correo electrónico fue enviado por un sistema
+            automático que no controla las respuestas.</span> -->
+    </div>
+    <style>
+        body {
+            background-color: #F2F4F7;
+            display: flex;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .email-container {
+            width: 90%;
+            margin-top: 40px;
+            padding-bottom: 30px;
+        }
+
+        .email-header {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .email-header img {
+            width: 150px;
+        }
+
+        .email-content {
+            background-color: #FCFCFB;
+        }
+
+        .email-welcome {
+            margin-top: 25px;
+            background-image: url('https://drive.google.com/uc?id=1ZceEr63O1cwMvQRlgsF8W6v3Tm3wLq0H');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 200px;
+            padding: 25px;
+        }
+
+        .email-welcome .welcome-coins {
+            display: none;
+        }
+
+        .email-welcome h3 {
+            margin: 0;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+
+        .email-welcome p {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .email-content-data {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .email-content-data p {
+            color: #41495D;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        .email-content-data span {
+            font-weight: 700;
+        }
+
+        .user-data-verification-container {
+            background-color: #F2F4F7;
+            width: 90%;
+            padding: 10px 10px;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .user-data-verification {
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+
+        .user-card {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            border-bottom: 1px solid #CCD1DE;
+            border-bottom-style: dashed;
+            padding: 0px 10px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .user-card-left p {
+            color: #D7001B;
+            font-weight: 700;
+            font-size: 15;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .user-card-right p {
+            color: #D7001B;
+            font-weight: 700;
+            font-size: 40px;
+            text-align: left;
+        }
+
+        .user-card-data-verification {
+            width: 90%;
+            margin: 0 auto;
+            padding-bottom: 20px;
+        }
+
+        .user-card-data-verification p {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .user-card-data-verification p .title {
+            text-align: right;
+            color: #41495D;
+            font-size: 15px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        .user-card-data-verification p .data {
+            text-align: left;
+            color: #41495D;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .confirmation-container {
+            margin: 0 auto;
+            margin-top: 30px;
+            background-image: url('https://drive.google.com/uc?id=15MM64juxoXHNrPp-wIWN5VQfbqNM2NtI');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 0 20px;
+        }
+
+        .confirmation-container h3 {
+            color: #41495D;
+            font-weight: 700;
+            font-size: 23;
+        }
+
+        .buttons-container {
+            margin-top: 19px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 10px;
+        }
+
+        .buttons-container .btn-primary {
+            background-color: #B1B120;
+            border: 1px solid #ffffff;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 15px;
+            color: #ffffff;
+            padding: 20px 10px;
+        }
+
+        .buttons-container .btn-secondary {
+            background-color: #D7001B;
+            border: 1px solid #ffffff;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 15px;
+            color: #ffffff;
+            padding: 20px 10px;
+        }
+
+        .confirmation-container p {
+            margin-top: 20px;
+            color: #41495D;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 35px;
+        }
+
+        .confirmation-container p span {
+            font-weight: 700 !important;
+            font-size: 22px;
+            color: #41495D;
+            margin-top: 0;
+        }
+
+        .email-container .disclaimer {
+            font-size: 12px;
+            display: block;
+            font-weight: 400;
+            color: #6C7893;
+            width: 95%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .email-footer {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .email-footer .cards {
+            position: absolute;
+            left: -110%;
+            top: -20%;
+        }
+
+        .email-footer .email-footer-data {
+            margin-left: 25px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .email-footer-data h4 {
+            color: #41495D;
+            font-size: 27px;
+            font-weight: 400;
+        }
+
+        .email-footer-data h4 .bold {
+            font-weight: 700;
+        }
+
+        .email-footer-data .btn-terciary {
+            background-color: #41495D;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 20px 40px;
+            border-radius: 30px;
+        }
+
+        .email-footer-data p {
+            color: #41495D;
+            font-weight: 700;
+            font-size: 27px;
+        }
+
+        .email-footer-data img {
+            width: 179px;
+            height: 44px;
+            margin-bottom: 20px;
+        }
+
+        .email-footer-data .coin-footer {
+            display: none;
+        }
+
+        .email-content .coins-middle {
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) {
+            .email-welcome {
+                height: 350px;
+                position: relative;
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+
+            .email-welcome h3 {
+                margin-top: 25px;
+            }
+
+            .email-welcome p {
+                margin-top: 41px;
+            }
+
+            .email-welcome .welcome-coins {
+                display: block;
+                position: absolute;
+                right: -39%;
+                top: 0%;
+                z-index: 3;
+            }
+
+            .buttons-container {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 30px;
+            }
+
+            .email-footer {
+                display: grid;
+                grid-template-columns: 40% 50%;
+            }
+
+            .email-footer .cards {
+                position: static;
+                margin-left: -120%;
+                margin-top: -30%;
+            }
+
+            .email-footer .email-footer-data {
+                margin-left: 0px;
+                position: relative;
+                width: 319px;
+            }
+
+            .email-footer-data p {
+                margin-top: 71px;
+            }
+
+            .email-footer .coin-footer {
+                display: block;
+                position: absolute;
+                right: -34%;
+                bottom: -20%;
+                height: 175px;
+            }
+
+            .email-content .coins-middle {
+                display: block;
+                position: absolute;
+                left: -15%;
+                bottom: 50%;
+            }
+
+            .email-content {
+                position: relative;
+                width: 95%;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .email-welcome {
+                height: 500px;
+            }
+
+            .email-welcome .welcome-coins {
+                right: -10%;
+            }
+
+            .email-content {
+                position: relative;
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .user-data-verification-container {
+                width: 75%;
+            }
+
+            .email-content .coins-middle {
+                left: -20%;
+                bottom: 45%;
+            }
+
+            .email-footer .cards {
+                margin-left: -85%;
+                margin-top: -25%;
+            }
+
+            .email-footer .email-footer-data {
+                width: 352px;
+            }
+        }
+
+        @media screen and (min-width: 1440px) {
+            .email-welcome {
+                height: 530px;
+                padding-top: 0px;
+            }
+
+            .email-welcome h3 {
+                margin-top: 100px;
+            }
+
+            .email-content .coins-middle {
+                left: -10%;
+                bottom: 45%;
+            }
+
+            .email-footer .cards {
+                margin-left: -62%;
+                margin-top: -19%;
+            }
+
+            .email-footer .coin-footer {
+                display: block;
+                position: absolute;
+                right: -85%;
+                bottom: -20%;
+                height: 175px;
+            }
+
+            .email-welcome .welcome-coins {
+                right: -10%;
+                top: 10%;
+            }
+        }
+        @media screen and (min-width: 2560px) {
+
+        }
+    </style>
+</body>
+
+</html>
